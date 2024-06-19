@@ -1,0 +1,13 @@
+global:
+  amf:
+    service:
+      ngap:
+        enabled: true
+  n6network:
+    subnetIP: 10.0.3.0
+    gatewayIP: 10.0.3.2
+
+free5gc-upf:
+  upf:
+    n6if:
+      ipAddress: 10.0.3.100
