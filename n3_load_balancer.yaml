@@ -4,12 +4,9 @@ metadata:
   name: my-service
 spec:
   selector:
-    nf: upf
+    nf: upfb
   ports:
     - protocol: UDP
       port: 2152
   type: LoadBalancer
-status:
-  loadBalancer:
-    ingress:
-    - ip: 192.168.56.103
+  loadBalancerIP: 192.168.56.104

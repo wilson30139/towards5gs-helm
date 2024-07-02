@@ -1,4 +1,5 @@
 global:
+  userPlaneArchitecture: ulcl
   amf:
     service:
       ngap:
@@ -8,6 +9,68 @@ global:
     gatewayIP: 10.0.3.2
 
 free5gc-upf:
-  upf:
+  upfb:
     n6if:
-      ipAddress: 10.0.3.100
+      ipAddress: 10.0.3.101
+    nodeSelector:
+      kubernetes.io/hostname: mec
+  upf1:
+    n6if:
+      ipAddress: 10.0.3.102
+    nodeSelector:
+      kubernetes.io/hostname: free5gc
+
+free5gc-amf:
+  amf:
+    nodeSelector:
+      kubernetes.io/hostname: free5gc
+
+free5gc-ausf:
+  ausf:
+    nodeSelector:
+      kubernetes.io/hostname: free5gc
+
+free5gc-dbpython:
+  dbpython:
+    nodeSelector:
+      kubernetes.io/hostname: free5gc
+
+free5gc-n3iwf:
+  n3iwf:
+    nodeSelector:
+      kubernetes.io/hostname: free5gc
+
+free5gc-nrf:
+  nrf:
+    nodeSelector:
+      kubernetes.io/hostname: free5gc
+
+free5gc-nssf:
+  nssf:
+    nodeSelector:
+      kubernetes.io/hostname: free5gc
+
+free5gc-pcf:
+  pcf:
+    nodeSelector:
+      kubernetes.io/hostname: free5gc
+
+free5gc-smf:
+  smf:
+    nodeSelector:
+      kubernetes.io/hostname: free5gc
+
+free5gc-udm:
+  udm:
+    nodeSelector:
+      kubernetes.io/hostname: free5gc
+
+free5gc-udr:
+  udr:
+    nodeSelector:
+      kubernetes.io/hostname: free5gc
+
+free5gc-webui:
+  webui:
+    nodeSelector:
+      kubernetes.io/hostname: free5gc

@@ -36,7 +36,7 @@ data:
       # If there are multiple connection, set addr to 0.0.0.0 or list all the addresses
       ifList:
         - addr: 0.0.0.0
-          type: N3
+          type: N9
           # name: upf.5gc.nctu.me
           # ifname: gtpif
 
